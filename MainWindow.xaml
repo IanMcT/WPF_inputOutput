@@ -1,0 +1,40 @@
+<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized">
+    <StackPanel>
+        <Label x:Name="lblOutput" Content="Output Example"/>
+        <Slider x:Name="sliderNumber" 
+                Maximum="100"
+                ValueChanged="sliderNumber_ValueChanged" LargeChange="10" SmallChange="1" TickPlacement="TopLeft" Value="8" IsSnapToTickEnabled="True"
+                >
+        </Slider>
+        <Label x:Name="sliderOutput"
+            Content="Label"/>
+        <Image x:Name="imgPicture"
+            Height="100"
+               Source="https://www.google.ca/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+               />
+        <Button x:Name="btnImage"
+                Click="btnImage_Click"
+                >Change Image</Button>
+        <CheckBox
+            x:Name="chkTrue"
+            Content="True if clicked!"
+            
+            Click="chkTrue_Checked"
+            />
+        <Label x:Name="chkOutput"/>
+        <TextBox
+            x:Name="txtEntry"
+            Height="23" 
+            TextChanged="txtEntry_TextChanged"
+            TextWrapping="Wrap" Text="TextBox"/>
+        <Label x:Name="lblTxtEntry" Content="Label"/>
+
+    </StackPanel>
+</Window>
